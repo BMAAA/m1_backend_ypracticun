@@ -6,7 +6,6 @@ function staticFile(res, filePath, ext) {
     fs.readFile("./public" + filePath, (err, data) => {
         if (err) {
             res.statusCode = 404;
-            console.log("3");
             res.end("Not Found");
         }
         res.end(data);
